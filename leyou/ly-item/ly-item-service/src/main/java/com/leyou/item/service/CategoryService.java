@@ -15,7 +15,7 @@ public class CategoryService {
     @Autowired
     private CategoryMapper categoryMapper;
 
-    public List<Category> queryCategoryListByPid(long pid){
+    public List<Category> queryCategoryListByPid(Long pid){
         List<Category> list = categoryMapper.queryCategoryListByPid(pid);
         if(CollectionUtils.isEmpty(list)){
             throw new LyException(ExceptionEnum.PRICE_CANNOT_BE_NULL);
